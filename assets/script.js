@@ -77,4 +77,60 @@
       });
     });
   });
+
+  // Copy command button handler
+  function showCopiedState(btn) {
+    btn.classList.add("copied");
+    var copyIcon = btn.querySelector(".copy-icon");
+    var checkIcon = btn.querySelector(".check-icon");
+    if (copyIcon && checkIcon) {
+      copyIcon.style.display = "none";
+      checkIcon.style.display = "block";
+    }
+    setTimeout(function () {
+      btn.classList.remove("copied");
+      if (copyIcon && checkIcon) {
+        copyIcon.style.display = "block";
+        checkIcon.style.display = "none";
+      }
+    }, 1800);
+  }
+
+  function fallbackCopyText(text, btn) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "absolute";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      showCopiedState(btn);
+    } catch (err) {
+      console.error("Copy failed", err);
+    }
+    document.body.removeChild(ta);
+  }
+
+  document.addEventListener("click", function (e) {
+    var copyBtn = e.target.closest(".copy-btn");
+    if (!copyBtn) return;
+
+    var container = copyBtn.closest(".code-box") || copyBtn.closest("pre") || copyBtn.parentElement;
+    if (!container) return;
+
+    var codeEl = container.querySelector("code") || container;
+    var textToCopy = codeEl.textContent.trim();
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textToCopy).then(function () {
+        showCopiedState(copyBtn);
+      }).catch(function () {
+        fallbackCopyText(textToCopy, copyBtn);
+      });
+    } else {
+      fallbackCopyText(textToCopy, copyBtn);
+    }
+  });
 })();
