@@ -38,9 +38,35 @@
         <div class="tabs">
           <button class="tab-btn active" data-tab="windows">Windows</button>
           <button class="tab-btn" data-tab="linux">Linux</button>
+          <button class="tab-btn" data-tab="source">Build from Source</button>
         </div>
         <div>
           <div class="tab-panel active" data-panel="windows">
+            <div class="requirements-card">
+              <div class="requirements-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span>System Requirements</span>
+              </div>
+              <div class="requirements-grid">
+                <div class="req-item">
+                  <span class="req-label">Operating System</span>
+                  <span class="req-value">Windows 10 or higher (64-bit)</span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Architecture</span>
+                  <span class="req-value">64-bit (x86_64)</span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Memory (RAM)</span>
+                  <span class="req-value">4 GB min (8 GB recommended)</span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Disk Space</span>
+                  <span class="req-value">15 GB+ free space (~1 GB installer, expands to 10+ GB)</span>
+                </div>
+              </div>
+            </div>
+
             <ol class="steps">
               <li>
                 <h3>Download the installer</h3>
@@ -72,6 +98,31 @@
           </div>
 
           <div class="tab-panel" data-panel="linux">
+            <div class="requirements-card">
+              <div class="requirements-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span>System Requirements</span>
+              </div>
+              <div class="requirements-grid">
+                <div class="req-item">
+                  <span class="req-label">Operating System</span>
+                  <span class="req-value">Ubuntu 20.04+, Debian 11+, Fedora 36+</span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Architecture</span>
+                  <span class="req-value">64-bit (x86_64)</span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Memory (RAM)</span>
+                  <span class="req-value">4 GB min (8 GB recommended)</span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Disk Space</span>
+                  <span class="req-value">15 GB+ free space (~1 GB installer, expands to 10+ GB)</span>
+                </div>
+              </div>
+            </div>
+
             <ol class="steps">
               <li>
                 <h3>Download the installer</h3>
@@ -126,67 +177,108 @@
               </li>
             </ol>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="alt">
-      <div class="container">
-        <div class="section-title">
-          <h2>Building from source</h2>
-          <p>For contributors, or platforms without a prebuilt installer (e.g. macOS).</p>
+          <div class="tab-panel" data-panel="source">
+            <p class="tab-intro">For <span class="contributors">contributors</span>, or platforms without a prebuilt installer (e.g. macOS).</p>
+
+            <div class="requirements-card">
+              <div class="requirements-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span>Prerequisites & Requirements</span>
+              </div>
+              <div class="requirements-grid">
+                <div class="req-item">
+                  <span class="req-label">Operating System</span>
+                  <span class="req-value">Windows 10+, 64-bit Linux, or macOS</span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Environment Manager</span>
+                  <span class="req-value">Conda (Miniconda or Anaconda)</span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Tools</span>
+                  <span class="req-value"><code>git</code>, <code>conda</code></span>
+                </div>
+                <div class="req-item">
+                  <span class="req-label">Disk Space & RAM</span>
+                  <span class="req-value">12+ GB disk space · 8 GB RAM (4 GB min)</span>
+                </div>
+              </div>
+            </div>
+
+            <ol class="steps">
+              <li>
+                <h3>Clone the repository</h3>
+                <div class="code-box-group">
+                  <div class="code-box">
+                    <code>git clone https://github.com/garvit000/OsdagBridge.git</code>
+                    <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
+                      <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                      <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </button>
+                  </div>
+                  <div class="code-box">
+                    <code>cd OsdagBridge</code>
+                    <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
+                      <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                      <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3>Set up Conda environment</h3>
+                <p>Create and activate the environment with all required CAD, Qt, and analysis dependencies:</p>
+                <div class="code-box-group">
+                  <div class="code-box">
+                    <code>conda env create -f environment.yml</code>
+                    <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
+                      <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                      <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </button>
+                  </div>
+                  <div class="code-box">
+                    <code>conda activate osdagbridge-env</code>
+                    <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
+                      <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                      <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3>Install in editable mode</h3>
+                <div class="code-box">
+                  <code>pip install -e .</code>
+                  <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
+                    <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <h3>Run the desktop app</h3>
+                <div class="code-box">
+                  <code>python -m osdagbridge.desktop</code>
+                  <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
+                    <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <h3>Or run the CLI <span class="badge-soon">Coming Soon</span></h3>
+                <div class="code-box">
+                  <code>osdagbridge analyze project.yaml --solver native</code>
+                  <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
+                    <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
-        <ol class="steps">
-          <li>
-            <h3>Clone the repository</h3>
-            <div class="code-box-group">
-              <div class="code-box">
-                <code>git clone https://github.com/garvit000/OsdagBridge.git</code>
-                <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
-                  <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </button>
-              </div>
-              <div class="code-box">
-                <code>cd OsdagBridge</code>
-                <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
-                  <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <h3>Install in editable mode</h3>
-            <div class="code-box">
-              <code>pip install -e .</code>
-              <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
-                <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </button>
-            </div>
-          </li>
-          <li>
-            <h3>Run the desktop app</h3>
-            <div class="code-box">
-              <code>python -m osdagbridge.desktop</code>
-              <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
-                <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </button>
-            </div>
-          </li>
-          <li>
-            <h3>Or run the CLI <span class="badge-soon">Coming Soon</span></h3>
-            <div class="code-box">
-              <code>osdagbridge analyze project.yaml --solver native</code>
-              <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard">
-                <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <svg class="check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </button>
-            </div>
-          </li>
-        </ol>
         <p class="text-center mt-2">
           Continue to <a href="getting-started.html">Getting Started</a> for a full walkthrough of the desktop app and upcoming CLI/web interfaces.
         </p>

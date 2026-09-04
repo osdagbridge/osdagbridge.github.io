@@ -557,6 +557,67 @@ section.alt {
   display: block;
 }
 
+.tab-intro {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.contributors {
+  color: var(--color-brand);
+  font-weight: 600;
+}
+
+/* -------------------------- System Requirements --------------------------- */
+
+.requirements-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.requirements-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.85rem;
+}
+
+.requirements-title svg {
+  color: var(--color-brand);
+  flex-shrink: 0;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem 1.25rem;
+}
+
+.req-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.req-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.req-value {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
 /* ------------------------------------ FAQ ------------------------------------ */
 
 .faq-item {
