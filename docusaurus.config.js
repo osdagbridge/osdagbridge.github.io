@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://osdagbridge.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'osdagbridge', // Usually your GitHub org/user name.
+  projectName: 'OsdagBridge', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -62,6 +62,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 4,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
@@ -81,7 +85,7 @@ const config = {
             label: 'User Guide',
           },
           {
-            href: 'https://github.com/vanshika348/OsdagBridge',
+            href: 'https://github.com/osdag-admin/OsdagBridge.git',
             label: 'GitHub',
             position: 'right',
           },
@@ -95,7 +99,7 @@ const config = {
           items: [
            {
              label: 'OsdagBridge User Guide',
-             to: '/docs/intro',
+             to: '/docs/1-introduction',
           },
         ],
      },
@@ -104,7 +108,7 @@ const config = {
         items: [
            {
             label: 'GitHub',
-            href: 'https://github.com/vanshika348/OsdagBridge',
+            href: 'https://github.com/osdag-admin/OsdagBridge.git',
          },
        ],
      },
@@ -122,7 +126,7 @@ const config = {
        ],
     },
   ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright:`2026 OsdagBridge · LGPL-3.0`,
       },
       prism: {
         theme: prismThemes.github,

@@ -22,8 +22,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/user_guide">
-            Open User Guide
+            to="/docs/introduction">
+            Open Documentation
           </Link>
         </div>
       </div>
@@ -51,8 +51,8 @@ export default function Home() {
 
             <Link
               className="button button--primary button--lg"
-              to="/docs/user_guide">
-              Read the User Guide
+              to="/docs/introduction">
+              Read the Documentation
             </Link>
           </div>
         </section>
