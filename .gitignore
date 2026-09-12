@@ -19,4 +19,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-package-lock.json
+# Python & Environment
+.agent
+__pycache__/
+*.pyc
+*.log
+.venv/
+.env
