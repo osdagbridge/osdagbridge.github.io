@@ -1,9 +1,4 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -12,29 +7,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'OsdagBridge',
   tagline: 'Bridge Analysis and Design Software',
-  favicon: 'img/favicon.ico',
+  favicon: 'images/osdag_logo.png',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://osdagbridge.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'osdagbridge', // Usually your GitHub org/user name.
-  projectName: 'OsdagBridge', // Usually your repo name.
+  organizationName: 'osdagbridge',
+  projectName: 'OsdagBridge',
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -47,10 +33,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -62,22 +44,36 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-    tableOfContents: {
-      minHeadingLevel: 2,
-      maxHeadingLevel: 4,
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 4,
       },
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'images/3d-cad.png',
       colorMode: {
         respectPrefersColorScheme: true,
       },
       navbar: {
         title: 'OsdagBridge',
         logo: {
-          alt: 'My Site Log',
-          src: 'img/OsdagBridge-logo.svg',
+          alt: 'OsdagBridge Logo',
+          src: 'images/osdag_logo.png',
         },
         items: [
+          {
+            to: '/',
+            label: 'Home',
+            position: 'left',
+          },
+          {
+            to: '/installation',
+            label: 'Installation',
+            position: 'left',
+          },
+          {
+            to: '/getting-started',
+            label: 'Getting Started',
+            position: 'left',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'osdagBridgesidebar',
@@ -85,48 +81,90 @@ const config = {
             label: 'User Guide',
           },
           {
-            href: 'https://github.com/osdag-admin/OsdagBridge.git',
+            to: '/faq',
+            label: 'FAQ',
+            position: 'left',
+          },
+          {
+            to: '/contact',
+            label: 'Contact',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/osdag-admin/OsdagBridge',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
-      footer:{
+      footer: {
         style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-           {
-             label: 'OsdagBridge User Guide',
-             to: '/docs/1-introduction',
+        links: [
+          {
+            title: 'Navigation',
+            items: [
+              {
+                label: 'Home',
+                to: '/',
+              },
+              {
+                label: 'Installation',
+                to: '/installation',
+              },
+              {
+                label: 'Getting Started',
+                to: '/getting-started',
+              },
+              {
+                label: 'User Guide',
+                to: '/docs/1-introduction',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/osdag-admin/OsdagBridge',
+              },
+              {
+                label: 'Discord Server',
+                href: 'https://discord.gg/jkNjU53Mhz',
+              },
+              {
+                label: 'Report an Issue',
+                href: 'https://github.com/osdag-admin/OsdagBridge/issues',
+              },
+              {
+                label: 'Contact Us',
+                to: '/contact',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Osdag',
+                href: 'https://osdag.fossee.in/',
+              },
+              {
+                label: 'FOSSEE',
+                href: 'https://fossee.in/',
+              },
+              {
+                label: 'All Releases',
+                href: 'https://github.com/garvit000/OsdagBridge/releases',
+              },
+              {
+                label: 'License',
+                href: 'https://github.com/osdag-admin/OsdagBridge/blob/dev/LICENSE',
+              },
+            ],
           },
         ],
-     },
-     {
-        title: 'Community',
-        items: [
-           {
-            label: 'GitHub',
-            href: 'https://github.com/osdag-admin/OsdagBridge.git',
-         },
-       ],
-     },
-     {
-        title: 'More',
-        items: [
-          {
-           label: 'Osdag',
-           href: 'https://osdag.fossee.in/',
-         },
-        {
-           label: 'FOSSEE',
-           href: 'https://fossee.in/',
-        },
-       ],
-    },
-  ],
-        copyright:`2026 OsdagBridge · LGPL-3.0`,
+        copyright: `2026 OsdagBridge · LGPL-3.0`,
       },
       prism: {
         theme: prismThemes.github,
