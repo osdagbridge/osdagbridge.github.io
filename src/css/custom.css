@@ -1,40 +1,753 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * OsdagBridge Unified Theme & Styles
+ * Blends custom OsdagBridge brand design with Docusaurus Infima
  */
 
-/* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Infima Brand Overrides (Light Mode) */
+  --ifm-font-family-base: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ifm-heading-font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ifm-color-primary: #7a9210;
+  --ifm-color-primary-dark: #6e840e;
+  --ifm-color-primary-darker: #687c0e;
+  --ifm-color-primary-darkest: #55660b;
+  --ifm-color-primary-light: #86a012;
+  --ifm-color-primary-lighter: #8da813;
+  --ifm-color-primary-lightest: #a0be16;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Custom OsdagBridge Design Tokens */
+  --color-bg: #f7f8fb;
+  --color-bg-alt: #ffffff;
+  --color-surface: #ffffff;
+  --color-border: #e2e5ec;
+  --color-text: #1c2230;
+  --color-text-muted: #5b6273;
+  --color-brand: #7a9210;
+  --color-brand-dark: #5f720c;
+  --color-brand-contrast: #ffffff;
+  --color-accent: #16a085;
+  --color-code-bg: #eef1f8;
+  --shadow-sm: 0 1px 2px rgba(20, 24, 38, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 24, 38, 0.08);
+  --radius: 10px;
+  --max-width: 1120px;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Infima Brand Overrides (Dark Mode) */
+  --ifm-color-primary: #a3c22e;
+  --ifm-color-primary-dark: #93af29;
+  --ifm-color-primary-darker: #8ba627;
+  --ifm-color-primary-darkest: #738920;
+  --ifm-color-primary-light: #add533;
+  --ifm-color-primary-lighter: #b2d73b;
+  --ifm-color-primary-lightest: #c2e05a;
+
+  /* Custom OsdagBridge Design Tokens */
+  --color-bg: #10131c;
+  --color-bg-alt: #161a26;
+  --color-surface: #1a1f2c;
+  --color-border: #2a2f3d;
+  --color-text: #e8eaf1;
+  --color-text-muted: #a3a9bb;
+  --color-brand: #a3c22e;
+  --color-brand-dark: #b8d454;
+  --color-brand-contrast: #0c0e14;
+  --color-accent: #2ed3a8;
+  --color-code-bg: #1f2430;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
+
+/* --------------------------------- Layout & Base --------------------------- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+/* --------------------------------- Buttons -------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--color-brand);
+  color: var(--color-brand-contrast) !important;
+  border-color: var(--color-brand);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--color-brand-dark);
+  border-color: var(--color-brand-dark);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text) !important;
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: var(--color-brand);
+  color: var(--color-brand-contrast) !important;
+  border-color: var(--color-brand);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-text) !important;
+  border: 1px solid var(--color-border);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand) !important;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+}
+
+/* ---------------------------------- Hero ---------------------------------- */
+.hero-custom {
+  padding: 4.5rem 0 3.5rem;
+  background: var(--color-bg);
+}
+
+.hero-custom .eyebrow {
+  display: inline-block;
+  background: var(--color-code-bg);
+  color: var(--color-brand);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.3rem);
+  font-weight: 700;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-custom p.lead {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.badge-row img {
+  height: 22px;
+}
+
+/* ------------------------------- Page Header ------------------------------ */
+.page-header {
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.page-header p {
+  color: var(--color-text-muted);
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* --------------------------------- Sections -------------------------------- */
+section {
+  padding: 3.5rem 0;
+}
+
+.alt-section {
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+}
+
+.section-title p {
+  color: var(--color-text-muted);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* --------------------------------- Features -------------------------------- */
+.grid-features {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card-custom {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-custom h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.card-custom p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ------------------------------- Screenshots ------------------------------- */
+.grid-screenshots {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.screenshot-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-code-bg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.screenshot-label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+}
+
+/* ------------------------------------ Tabs ---------------------------------- */
+.tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tab-btn:hover {
+  color: var(--color-brand);
+}
+
+.tab-btn.active {
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.tab-intro {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.highlight-text {
+  color: var(--color-brand);
+  font-weight: 600;
+}
+
+/* -------------------------- System Requirements --------------------------- */
+.requirements-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.requirements-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.requirements-title svg {
+  color: var(--color-brand);
+  flex-shrink: 0;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.req-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.req-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.req-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* ------------------------------- Step Lists -------------------------------- */
+.steps-list {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.steps-list li {
+  position: relative;
+  padding: 0 0 2rem 3.25rem;
+  border-left: 2px solid var(--color-border);
+  margin-left: 1rem;
+}
+
+.steps-list li:last-child {
+  border-color: transparent;
+  padding-bottom: 0;
+}
+
+.steps-list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: -1.15rem;
+  top: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--color-brand);
+  color: var(--color-brand-contrast);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.92rem;
+}
+
+.steps-list h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.steps-list p {
+  margin: 0 0 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------- Code Boxes & Copy -------------------------- */
+.code-box-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.code-box {
+  position: relative;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.85rem 3.5rem 0.85rem 1.1rem;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  transition: border-color 0.15s ease;
+}
+
+.code-box:hover {
+  border-color: var(--color-brand);
+}
+
+.code-box code {
+  background: none;
+  padding: 0;
+  color: var(--color-text);
+  white-space: nowrap;
+  font-size: 0.93rem;
+  font-family: Consolas, "Fira Code", monospace;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  border-radius: 6px;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+/* ------------------------------------ FAQ ------------------------------------ */
+.faq-container {
+  max-width: 860px;
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.15rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--color-brand);
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item .faq-body {
+  padding: 0 1.5rem 1.35rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ------------------------------ Callout / Notes ------------------------------ */
+.callout {
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-brand);
+  background: var(--color-bg-alt);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.callout.warning {
+  border-left-color: #d68a00;
+}
+
+.callout.info {
+  border-left-color: var(--color-accent);
+}
+
+.callout strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.badge-soon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-code-bg);
+  color: var(--color-brand);
+  border: 1px solid var(--color-border);
+  margin-left: 0.5rem;
+}
+
+/* ------------------------------------ Contact ---------------------------------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-card-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-brand);
+}
+
+.contact-card-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 10px;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.contact-card-content h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.contact-card-content p {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.contact-card-content .contact-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-box {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-box h2 {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+
+.form-box p.form-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: var(--color-text);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgba(122, 146, 16, 0.18);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.form-notice {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.75rem;
+  line-height: 1.4;
+}
+
+.status-box {
+  padding: 0.85rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.status-box.success {
+  background: rgba(46, 211, 168, 0.15);
+  border: 1px solid var(--color-accent);
+  color: var(--color-text);
+}
+
+.status-box.info {
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+/* ------------------------ Documentation Overrides --------------------------- */
 .input-highlight {
   background-color: #eef7d8;
-  color:  #5c8525;
+  color: #5c8525;
   padding: 2px 5px;
   border-radius: 3px;
   font-weight: 500;
 }
+
 .custom-note {
   background-color: #eef7d8;
   border-left: 4px solid #1d6e20;
@@ -44,150 +757,48 @@
   line-height: 1.45;
   color: #5c8525;
 }
+
 .custom-note-title {
   font-weight: 600;
   margin-bottom: 3px;
 }
-/* User Guide - Chapter Heading */
-.theme-doc-markdown h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-/* Reduce Docusaurus documentation chapter heading size */
-.markdown h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-/* Compact Docusaurus note/admonition boxes */
-.theme-admonition {
-  padding: 0.75rem 1rem;
-  margin: 1rem 0;
-}
 
-.theme-admonition .admonitionHeading {
-  margin-bottom: 0.35rem;
-}
-
-.theme-admonition .admonitionContent {
-  margin: 0;
-}
-
-.theme-admonition p {
-  margin: 0;
-}
-/* Compact right-side table of contents */
-.table-of-contents {
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-
-.table-of-contents li {
-  margin: 0.35rem 0;
-}
-
-.table-of-contents a {
-  color: var(--ifm-color-emphasis-700);
-}
-
-.table-of-contents a:hover {
-  color: var(--ifm-color-primary);
-}
-/* Compact chapter sidebar */
-.theme-doc-sidebar-menu {
-  font-size: 0.9rem;
-}
-
-.theme-doc-sidebar-menu .menu__list-item {
-  margin: 0.15rem 0;
-}
-
-.theme-doc-sidebar-menu .menu__link {
-  padding: 0.45rem 0.75rem;
-  line-height: 1.3;
-}
-/* Documentation images */
 .markdown img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 1.25rem auto;
 }
-/* =========================================
-   ON THIS PAGE - Professional TOC
-   ========================================= */
 
+/* Table of contents adjustments */
 .theme-doc-toc-desktop {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* ON THIS PAGE heading */
 .theme-doc-toc-desktop .table-of-contents::before {
   content: "ON THIS PAGE";
   display: block;
-  color: #205d3b;
+  color: var(--color-brand);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   margin-bottom: 1.25rem;
 }
 
-/* Vertical line */
 .theme-doc-toc-desktop .table-of-contents {
-  border-left: 1px solid #d9d9d9;
+  border-left: 1px solid var(--color-border);
   padding-left: 1.25rem;
 }
 
-/* All TOC links */
-.theme-doc-toc-desktop .table-of-contents__link {
-  display: block;
-  color: #555;
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.4;
-  padding: 0.45rem 0;
-  transition: color 0.2s ease;
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Hover */
-.theme-doc-toc-desktop .table-of-contents__link:hover {
-  color: #205d3b;
-  text-decoration: none;
-}
-
-/* TOC hierarchy */
-.theme-doc-toc-desktop .table-of-contents ul {
-  margin: 0;
-  padding-left: 1rem;
-}
-
-.theme-doc-toc-desktop .table-of-contents ul ul {
-  padding-left: 1rem;
-}
-
-/* Keep TOC links compact */
-.theme-doc-toc-desktop .table-of-contents li {
-  margin: 0;
-  padding: 0;
-}
-
-.theme-doc-toc-desktop .table-of-contents__link {
-  display: block;
-  color: #555;
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.4;
-  padding: 0.45rem 0;
-}
-
-/* Active heading */
-.theme-doc-toc-desktop .table-of-contents__link--active {
-  color: #205d3b;
-  font-weight: 600;
-}
-
-/* Hover */
-.theme-doc-toc-desktop .table-of-contents__link:hover {
-  color: #205d3b;
-  text-decoration: none;
+@media (max-width: 780px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
