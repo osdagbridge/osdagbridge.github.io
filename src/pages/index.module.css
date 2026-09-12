@@ -1,0 +1,28 @@
+.heroBanner {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.introSection {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.introSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.introSection p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
