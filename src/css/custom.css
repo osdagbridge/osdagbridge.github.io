@@ -250,8 +250,15 @@ section {
   border-radius: var(--radius);
   padding: 1.75rem;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
+
+.card-custom:nth-child(1) { border-color: var(--color-brand); }
+.card-custom:nth-child(2) { border-color: #168aad; }
+.card-custom:nth-child(3) { border-color: var(--color-accent); }
+.card-custom:nth-child(4) { border-color: #d68a00; }
+.card-custom:nth-child(5) { border-color: #7b61a8; }
+.card-custom:nth-child(6) { border-color: #c45757; }
 
 .card-custom:hover {
   transform: translateY(-3px);

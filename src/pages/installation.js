@@ -121,6 +121,9 @@ export default function Installation() {
                         <strong>Windows SmartScreen notice</strong>
                         <p>Since the installer isn't yet code-signed, Windows may show a "Windows protected your PC" prompt. Click <em>More info</em> → <em>Run anyway</em> to continue.</p>
                       </div>
+                      <div className="callout info">
+                        <p>OsdagBridge installs to <code>C:\Program Files\OsdagBridge</code> by default. You can choose a different folder during setup.</p>
+                      </div>
                     </li>
                     <li>
                       <h3>Launch OsdagBridge</h3>
@@ -187,7 +190,8 @@ export default function Installation() {
                     </li>
                     <li>
                       <h3>Launch OsdagBridge</h3>
-                      <p>Launch from applications menu → OsdagBridge</p>
+                      <p>Launch from the applications menu → OsdagBridge, or open it from a terminal:</p>
+                      <CodeBox code="osdagbridge" />
                     </li>
                     <li>
                       <h3>Uninstalling</h3>

@@ -15,7 +15,7 @@ export default function Home() {
             <span className="eyebrow">Part of the Osdag ecosystem</span>
             <h1 className="hero-title">OsdagBridge</h1>
             <p className="lead">
-              OsdagBridge is a cross-platform free and open-source software for the 
+              OsdagBridge is a cross-platform <span style={{color: "#8da813"}}>free</span> and <span style={{color: "#8da813"}}>open-source</span> software for the 
               analysis and design of steel girder bridges, following the Indian Standards (IS) and Indian Road Congress (IRC) guidelines.
             </p>
             <div className="badge-row">

@@ -16,7 +16,7 @@ function CodeBox({ code }) {
 
   return (
     <div className="code-box">
-      <code>{code}</code>
+      <span>{code}</span>
       <button className="copy-btn" onClick={handleCopy} aria-label="Copy command" title="Copy to clipboard">
         {copied ? (
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -41,7 +41,7 @@ export default function GettingStarted() {
       <main>
         <div className="page-header container">
           <h1>Getting Started</h1>
-          <p>A quick tour of the desktop app, plus a preview of the upcoming CLI and web interfaces.</p>
+          <p>Detailed information can be found in the <Link to='./docs/1-introduction'>user guide</Link>.</p>
         </div>
 
         {/* Section 1: Desktop Application */}
