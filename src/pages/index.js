@@ -24,7 +24,7 @@ export default function Home() {
               <img src="https://img.shields.io/github/license/garvit000/OsdagBridge" alt="License" />
             </div>
             <div className="btn-group">
-              <a className="btn btn-primary" href="https://github.com/garvit000/OsdagBridge/releases/latest/download/OsdagBridge-Setup.exe">
+              <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge/releases/latest/download/OsdagBridge-Setup.exe">
                 Download for Windows
               </a>
               <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge/releases/latest/download/OsdagBridge-Linux.sh">
@@ -77,9 +77,8 @@ export default function Home() {
         <section className="screenshots-section">
           <div className="container">
             <div className="section-title">
-              <h2>Highlighted features</h2>
-              <p>Screenshots of the Template page, 3D CAD, plots and report.</p>
-            </div>
+              <h2>Interactive UI</h2>
+              </div>
             <div className="grid-screenshots">
               <div className="screenshot-card">
                 <img src={useBaseUrl('/images/template_page.png')} alt="OsdagBridge template page" loading="lazy" />
@@ -95,7 +94,7 @@ export default function Home() {
               </div>
               <div className="screenshot-card">
                 <img src={useBaseUrl('/images/report-preview.png')} alt="OsdagBridge report preview" loading="lazy" />
-                <span className="screenshot-label">Report Preview</span>
+                <span className="screenshot-label">Detailed Technical Report</span>
               </div>
             </div>
           </div>

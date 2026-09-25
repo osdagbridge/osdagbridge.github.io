@@ -16,7 +16,7 @@ function CodeBox({ code }) {
 
   return (
     <div className="code-box">
-      <code>{code}</code>
+      <span>{code}</span>
       <button className="copy-btn" onClick={handleCopy} aria-label="Copy command" title="Copy to clipboard">
         {copied ? (
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
