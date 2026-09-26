@@ -13,7 +13,7 @@ OsdagBridge is currently supported on *Windows* and *Linux* operating systems.
 OsdagBridge is not currently supported on *macOS*.
 :::
 
-Before installing OsdagBridge, ensure that the system meets the required operating system and software prerequisites.
+Before installing OsdagBridge, ensure that the system meets the required operating system and software requirements.
 
 ### 2.2 Installation and Setup
 

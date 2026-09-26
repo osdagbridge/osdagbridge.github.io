@@ -182,7 +182,7 @@ The available parameters include:
 | **Load (kN/m)** | Displays the corresponding railing load per unit length. |
 
 :::note
-The *Railing* section is available for editing when a *Footpath* is selected under *Geometric Details**\ in the Basic Inputs section.
+The *Railing* section is available for editing when a *Footpath* is selected under *Geometric Details* in the Basic Inputs section.
 :::
 
 ##### *Wearing Course*

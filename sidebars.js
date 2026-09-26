@@ -8,7 +8,6 @@ const sidebars = {
     'generated-outputs',
     'saving-and-opening-a-project',
     'error-messages-troubleshooting',
-    'faqs',
     'references-additional-resources',
   ],
 };
