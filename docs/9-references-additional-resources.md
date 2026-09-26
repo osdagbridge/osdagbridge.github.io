@@ -1,9 +1,9 @@
 ---
-title: 10. References / Additional Resources
-sidebar_label: 10. References / Additional Resources
+title: 9. References / Additional Resources
+sidebar_label: 9. References / Additional Resources
 ---
 
-# 10. References / Additional Resources
+# 9. References / Additional Resources
 
 This chapter provides references and additional resources related to OsdagBridge.
 

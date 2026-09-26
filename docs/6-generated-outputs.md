@@ -35,7 +35,7 @@ The available CAD viewing and visualization controls can be used to adjust the m
 
 The Plots view provides a graphical representation of the analysis results. It allows users to review structural response quantities for the selected load case or load combination.
 
-For example, the software can display a *Shear Force Diagram (SFD)* for the selected load case/combination.
+For example, the software can display a *Shear Force Diagram (SFD)* for the selected load case or load combination.
 
 ![plots view](/img/6.3.png)
 #### 6.3.1 Plot View Controls
@@ -144,7 +144,7 @@ The complete report-generation workflow is:
 7. Select *Preview PDF* to review the report.
 8. Select *Save PDF* to generate the final report.
 
-### 6.4 Log Window
+### 6.5 Log Window
 
 The Log Window displays messages generated during the analysis and design process. It provides information about the progress and status of different stages of the design workflow and helps users monitor the execution of the analysis and design.
 
