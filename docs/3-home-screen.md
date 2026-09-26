@@ -143,7 +143,7 @@ The recommended workflow is:
 2. *Enter the basic inputs*
 3. *Enter additional inputs, if applicable*
 4. *Save the input configuration*
-5. *Run the design**
+5. *Run the design*
 6. *Review the bridge model and analysis views*
 7. *Review the design results*
 8. *Generate and review the design report*
@@ -176,7 +176,7 @@ Before proceeding, verify that:
 - the required material and design parameters have been specified.
 
 :::note
-—*Editable and Non-Editable Inputs* : Input fields in *Additional Inputs* may be editable, software-defined, or dependent on the selected *Design Type*.
+**Editable and Non-Editable Inputs** : Input fields in *Additional Inputs* may be editable, software-defined, or dependent on the selected *Design Type*.
  If a field is not editable, review the selected *Design Type* or the relevant preceding inputs, where applicable.
 :::
 
