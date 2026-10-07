@@ -62,6 +62,7 @@ const config = {
           {
             to: '/',
             label: 'Home',
+            activeBaseRegex: '^/$',
             position: 'left',
           },
           {

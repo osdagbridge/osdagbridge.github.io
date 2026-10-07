@@ -82,7 +82,7 @@ export default function Home() {
             <div className="grid-screenshots">
               <div className="screenshot-card">
                 <img src={useBaseUrl('/images/template_page.png')} alt="OsdagBridge template page" loading="lazy" />
-                <span className="screenshot-label">Template Page</span>
+                <span className="screenshot-label">Interactive UI</span>
               </div>
               <div className="screenshot-card">
                 <img src={useBaseUrl('/images/3d-cad.png')} alt="OsdagBridge 3D CAD model view" loading="lazy" />
@@ -93,8 +93,16 @@ export default function Home() {
                 <span className="screenshot-label">Analysis Plots</span>
               </div>
               <div className="screenshot-card">
+                <img src={useBaseUrl('/images/util_ratios.png')} alt="Utilization Ratios for all Design Checks" loading="lazy" />
+                <span className="screenshot-label">Utilization Ratios for all Design Checks</span>
+              </div>
+              <div className="screenshot-card">
                 <img src={useBaseUrl('/images/report-preview.png')} alt="OsdagBridge report preview" loading="lazy" />
                 <span className="screenshot-label">Detailed Technical Report</span>
+              </div>
+              <div className="screenshot-card">
+                <img src={useBaseUrl('/images/BIM.png')} alt="Export as IFC to BIM" loading="lazy" />
+                <span className="screenshot-label">Export as IFC to BIM</span>
               </div>
             </div>
           </div>
