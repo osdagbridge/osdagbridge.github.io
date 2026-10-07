@@ -124,6 +124,10 @@ export default function Installation() {
                       <div className="callout info">
                         <p>OsdagBridge installs to <code>C:\Program Files\OsdagBridge</code> by default. You can choose a different folder during setup.</p>
                       </div>
+                      <div className="callout warning">
+                        <strong>Choose a short installation path</strong>
+                        <p>For best results, choose an installation path that is short and has few nested folders. Very long or deeply nested paths, such as <code>C:\Users\xyz\abc\pqr\def\hij\osb</code>, may prevent OsdagBridge from launching correctly. We recommend keeping the default location or choosing a similarly short folder such as <code>C:\OsdagBridge</code>.</p>
+                      </div>
                     </li>
                     <li>
                       <h3>Launch OsdagBridge</h3>
