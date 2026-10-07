@@ -77,7 +77,7 @@ export default function Home() {
         <section className="screenshots-section">
           <div className="container">
             <div className="section-title">
-              <h2>Interactive UI</h2>
+              <h2>Highlighted features</h2>
               </div>
             <div className="grid-screenshots">
               <div className="screenshot-card">
