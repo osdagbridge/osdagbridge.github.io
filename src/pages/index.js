@@ -93,8 +93,8 @@ export default function Home() {
                 <span className="screenshot-label">Analysis Plots</span>
               </div>
               <div className="screenshot-card">
-                <img src={useBaseUrl('/images/util_ratios.png')} alt="Utilization Ratios for all Design Checks" loading="lazy" />
-                <span className="screenshot-label">Utilization Ratios for all Design Checks</span>
+                <img src={useBaseUrl('/images/util_ratios.png')} alt="Utilization Ratios" loading="lazy" />
+                <span className="screenshot-label">Utilization Ratios</span>
               </div>
               <div className="screenshot-card">
                 <img src={useBaseUrl('/images/report-preview.png')} alt="OsdagBridge report preview" loading="lazy" />
