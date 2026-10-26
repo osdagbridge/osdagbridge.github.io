@@ -19,15 +19,15 @@ export default function Home() {
               analysis and design of steel girder bridges, following the Indian Standards (IS) and Indian Road Congress (IRC) guidelines.
             </p>
             <div className="badge-row">
-              <img src="https://img.shields.io/github/v/release/garvit000/OsdagBridge?label=latest%20release" alt="Latest release" />
-              <img src="https://img.shields.io/github/downloads/garvit000/OsdagBridge/total?label=downloads" alt="Downloads" />
-              <img src="https://img.shields.io/github/license/garvit000/OsdagBridge" alt="License" />
+              <img src="https://img.shields.io/github/v/release/garvit000/OsdagBridge-Desktop?label=latest%20release" alt="Latest release" />
+              <img src="https://img.shields.io/github/downloads/garvit000/OsdagBridge-Desktop/total?label=downloads" alt="Downloads" />
+              <img src="https://img.shields.io/github/license/garvit000/OsdagBridge-Desktop" alt="License" />
             </div>
             <div className="btn-group">
-              <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge/releases/latest/download/OsdagBridge-Setup.exe">
+              <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge-Desktop/releases/latest/download/OsdagBridge-Setup.exe">
                 Download for Windows
               </a>
-              <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge/releases/latest/download/OsdagBridge-Linux.sh">
+              <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge-Desktop/releases/latest/download/OsdagBridge-Linux.sh">
                 Download for Linux
               </a>
               <Link className="btn btn-outline" to="/docs/1-introduction">
