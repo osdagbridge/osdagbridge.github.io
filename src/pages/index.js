@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 export default function Home() {
   return (
     <Layout
-      title="Open-Source Steel Bridge Design"
+      title="OsdagBridge"
       description="OsdagBridge is a modular, open-source software for the analysis and design of steel girder bridges following IS and IRC guidelines.">
       <main>
         {/* Hero */}
