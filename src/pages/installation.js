@@ -109,7 +109,7 @@ export default function Installation() {
                       <h3>Download the installer</h3>
                       <p>Grab the latest Windows installer directly from GitHub Releases:</p>
                       <div className="btn-group">
-                        <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge/releases/latest/download/OsdagBridge-Setup.exe">
+                        <a className="btn btn-secondary" href="https://github.com/osdagbridge/OsdagBridge-Desktop/releases/latest/download/OsdagBridge-Setup.exe">
                           Download OsdagBridge-Setup.exe
                         </a>
                       </div>
@@ -178,7 +178,7 @@ export default function Installation() {
                       <h3>Download the installer</h3>
                       <p>Grab the latest Linux shell installer directly from GitHub Releases:</p>
                       <div className="btn-group">
-                        <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge/releases/latest/download/OsdagBridge-Linux.sh">
+                        <a className="btn btn-secondary" href="https://github.com/osdagbridge/OsdagBridge-Desktop/releases/latest/download/OsdagBridge-Linux.sh">
                           Download OsdagBridge-Linux.sh
                         </a>
                       </div>
