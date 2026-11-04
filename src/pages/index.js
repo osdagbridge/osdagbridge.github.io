@@ -24,10 +24,10 @@ export default function Home() {
               <img src="https://img.shields.io/github/license/garvit000/OsdagBridge-Desktop" alt="License" />
             </div>
             <div className="btn-group">
-              <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge-Desktop/releases/latest/download/OsdagBridge-Setup.exe">
+              <a className="btn btn-secondary" href="https://github.com/osdagbridge/OsdagBridge-Desktop/releases/latest/download/OsdagBridge-Setup.exe">
                 Download for Windows
               </a>
-              <a className="btn btn-secondary" href="https://github.com/garvit000/OsdagBridge-Desktop/releases/latest/download/OsdagBridge-Linux.sh">
+              <a className="btn btn-secondary" href="https://github.com/osdagbridge/OsdagBridge-Desktop/releases/latest/download/OsdagBridge-Linux.sh">
                 Download for Linux
               </a>
               <Link className="btn btn-outline" to="/docs/1-introduction">
